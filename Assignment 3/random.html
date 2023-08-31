@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <center><label for="random"><br>If you click the button, you will get a random number between 1 and...</label></center>
+    <form>
+        <center><input type="number" id="random" min="1" max="1000"></center><br>
+
+        <center><p id="demo">Random Number will appear here...</p></center>
+
+    </form>
+    <center><button onclick="random()">Get Random Numbera</button></center><hr><br>
+    <p><center>ထွက်ချင်တဲ့ Random number အရေအတွက် ကို input တောင်းပြီး loop နဲ့ စမ်းကြည့်ပေမယ့် web page မှာ တစ်လုံးဘဲ ပေါ်လို့ Assignment ကို ဒီလိုပြောင်းထပ်လိုက်ပါတယ် ဆရာ</center></p>
+
+    <script>
+        var input=document.querySelector("input[type='number']");
+        var button=document.querySelector("button");
+
+        button.addEventListener("click", random)
+
+        function random(){
+                let x = Math.floor((Math.random() * input.value) + 1);
+
+                document.getElementById("demo").innerHTML=x;
+                
+            
+        }
+
+
+
+    </script>
+</body>
+</html>

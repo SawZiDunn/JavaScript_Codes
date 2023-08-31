@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+</head>
+<body>
+
+    <center><h1>Registration Process</h1></center><br>
+
+    <input type="text" id="userName" placeholder="User Name" ><br><br>
+    <input type="text" id="pass1" placeholder="Enter Password" ><br><br>
+    <input type="text" id="pass2" placeholder="Confirm Password" ><br><br>
+
+    <button onclick="register()" id="button1">Register</button><br>
+
+    <h3 id="out">............</h3>
+
+    <script>
+        let id=0;
+        var db=[{}];
+
+        let output=document.getElementById("out");
+        let rUsername=document.getElementById("userName");
+        let pass1=document.getElementById("pass1");
+        let pass2=document.getElementById("pass2");
+
+        function register(){
+            if(pass1.value===pass2.value){
+
+                if(usernameExit(rUsername.value,pass1.value)){
+                    output.innerHTML="User name already exits.";
+                }else{
+                    toUpdate(rUsername.value, pass1.value);
+                    output.innerHTML="Already Updated..."
+                }               
+            }
+        }
+
+        function toUpdate(uname,pw){
+            id++;
+            console.log(id);
+            let dataToUpdate={ID:id,UserName:uname,Password:pw};
+            db.push(dataToUpdate);
+            console.log(db);
+
+        }
+
+        function usernameExit(uname,pw){
+            let temp=0;
+            for(let i=0;i<db.length;i++){
+                console.log(`Contents are ${db[i].UserName}`);
+                
+                if(db[i].UserName===uname && db[i].Password===pw){
+                    temp=1;
+                }
+            }
+            if(temp===1){
+                return true;
+            }else{
+                return false;
+            }
+        }
+     
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Shop</title>
+</head>
+<body>
+    <center><h1>Modern Shop</h1></center>
+    <h3><center></center></h3>
+
+
+    <script>
+        let choice = window.prompt("Enter your choice: Noodle or Coffee?");
+        alert("You have choosen " +choice );
+        let h3 = document.querySelector("h3");
+
+        if (choice === "noodle"){
+            let choice2 = window.prompt("Normal noodle or Special Tom Yum Noodle?")
+            if(choice2 === "normal"){
+                h3.textContent = "Here is normal noodle for you, sir..."
+            }else if(choice2 === "special"){
+                let password = window.prompt("Enter your password");
+                
+                if (password === "6857"){
+                    window.location.href = "nana.html";
+                }else{
+                    window.location.htef = "resign.html"
+                }
+                
+            }else{
+                
+                h3.textContent = "This is VIP customer."
+                
+            }
+            
+        }else{
+            let choice2 = window.prompt("Hot Coffee or Ice Coffee")
+            if(choice2 === "hot"){
+                h3.textContent = "Here is hot coffee for you, sir..."
+            }else if(choice2 === "ice"){
+                h3.textContent = "Here is special ice coffee for you, sir..."
+            }else{
+                h3.textContent = "Here is sweet ice coffee with over sugar for our regular special customer."
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snack Shop</title>
+</head>
+<body>
+
+    <label for="toeat">Select your preferance...</label>
+
+    <select name="" id="toeat">
+        <option value="">Please choose here</option>
+        <option value="KFC and Pepsi">KFC and Pepsi</option>
+        <option value="Hamburgar">Hamburgar and CocaCola</option>
+        <option value="Mcdonald">McDonald</option>
+        <option value="coffee">Coffee and Cake</option>
+        <option value="potato">Potato Chips</option>
+    </select>
+
+    <label for="count">Quantaty:</label>
+    <input type="number" id="count" min="1" max="10" value="0" name="countnumber">
+
+    <h1></h1>
+    <h3></h3>
+
+</body>
+
+<script>
+    let select = document.querySelector("select");
+    let number = document.querySelector("input");
+    let h1 = document.querySelector("h1");
+    let h3 = document.querySelector("h3");
+
+    number.addEventListener("change", food);
+
+    function food(){
+        h1.textContent = "I will take " + number.value + " " + select.value + ".";
+        // h3.textContent = "like about " + number.value;
+    }
+</script>
+</html>
