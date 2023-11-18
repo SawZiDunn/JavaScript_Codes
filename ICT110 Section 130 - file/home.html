@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>E-commerce site</title>
+	<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 200px;
+  background-color: #f1f1f1;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+li a.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+
+.slider {
+    width: 500px;
+    height: 300px;
+    background-color: yellow;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
+    text-align: center;
+    overflow: hidden;
+}
+
+.image-container {
+    width: 1500px;
+    background-color: pink;
+    height: 300px;
+    clear: both;
+    position: relative;
+    -webkit-transition: left 2s;
+    -moz-transition: left 2s;
+    -o-transition: left 2s;
+    transition: left 2s;
+}
+
+.slide {
+    float: left;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+#slide-1:target ~ .image-container {
+    left: 0px;
+}
+
+#slide-2:target ~ .image-container {
+  	left: -500px;
+}
+
+#slide-3:target ~ .image-container {
+    left: -1000px;
+}
+
+.buttons {
+    position: relative;
+    top: -20px;
+}
+
+.buttons a {
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border-radius: 50px;
+    background-color: lightgreen;
+}
+
+</style>
+</head>
+<body>
+
+<hgroup>
+	<center><img src="img/banner.jpg"></center>
+	<table border="0">
+		<tr>
+			<td width="600px"><img src="img/rsu_png.png" width="5%" height="5%"></td>
+			<td width="600px">Save more on App | Sell on Lazada | Cart | Sign Up</td>
+		</tr>
+	</table>
+</hgroup>
+	
+<bgroup>
+	<promotion_area>
+
+	<div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="img/rsu_png.png" class="slide" width="500" height="300" />
+        <img src="img/banner.jpg" class="slide" width="500" height="300" />
+        <img src="img/1.jpeg" class="slide" width="500" height="300" />
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
+
+	</promotion_area>
+
+	<ul>
+		<li><a class="active" href="#home.html">Electronic Devices</a></li>
+		<li><a href="#home.html">Home & Lifestyle</a></li>
+		<li><a href="#home.html">Sport & Travel</a></li>
+		<li><a href="#home.html">Babies & Toys</a></li>
+	</ul>
+
+	<ol>
+		<li> Home </li>
+		<li> Contact Us </li>
+	</ol>
+
+	<dl>
+		<dt> Iphone 14 pro max </dt>
+		<dd> loremsdbfjkbdjbjfabsdjgbsbkfodxklznvknsdkfldkmvksdnvjkasnldlNVJKnsjk.ndn </dd>
+		<dt> Samsung Note II</dt>
+		<dd> masjkfbjbuasdlfbwbdfslvkjbvuawgfiehfbahdbs vjkbhabsiuhfbeisbfdjksb </dd>
+	</dl>
+
+</bgroup>
+
+<vdo>
+	<center>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/07d2dXHYb94" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	</center>
+</vdo>
+
+<footer>
+	<center><h6><em>Copyright@Lazada</em></h6></center>
+	Follow Us <a href="https://web.facebook.com/LazadaThailand/?_rdc=1&_rdr" target="_blank"><img src="img/sm_icon/fb.png" width="2%" height="2%"></a>
+</footer>
+
+<address>
+	<center><em><strong><q>Rangsit University</q> 53/3 Phathumthani <mark>(flood area)</mark></strong></center>
+</address>
+
+</body>
+</html>

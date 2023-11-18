@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+<style media="screen">
+      .grid-wrap div{
+        border-radius: 3px;
+        background-color: red;
+      }
+
+      .grid-wrap{
+display: grid;
+grid-gap: 10px;
+grid-template-columns: 1fr 1fr;
+grid-template-rows: 50px 50px 50px;}
+
+.flex-wrap div{
+  border-radius: 4px;
+  background-color: skyblue;
+  flex: 1;
+}
+ .flex-wrap{
+   display: flex;
+
+ }
+
+</style>
+
+  </head>
+
+  <body>
+  <div class="grid-wrap">
+      <div class="item1">One</div>
+      <div class="item1">Two</div>
+      <div class="item1">Three</div>
+      <div class="item1">Four</div>
+      <div class="item1">Five</div>
+      <div class="item1">Six</div>
+</div><br>
+
+<div class="flex-wrap">
+    <div class="flexitem1">One</div>
+    <div class="flexitem1">Two</div>
+    <div class="flexitem1">Three</div>
+    <div class="flexitem1">Four</div>
+    <div class="flexitem1">Five</div>
+    <div class="flexitem1">Six</div>
+</div>
+
+
+  </body>
+</html>

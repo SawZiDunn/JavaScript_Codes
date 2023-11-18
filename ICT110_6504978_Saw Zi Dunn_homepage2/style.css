@@ -1,0 +1,89 @@
+body{
+  margin:0;
+  background-color: #9e9fb6;
+}
+
+.menubar{
+  list-style-type:none;
+  /* background-color: #000000; */
+  background-image: url(https://besthqwallpapers.com/Uploads/15-4-2019/87588/thumb2-program-code-black-backgrounds-programming-background-with-program-code-code.jpg);
+  width: 15.3%;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+
+}
+
+.menubar li a{
+  display:block;
+  padding: 8px 15px;
+  color: white;
+  font-size: 19px;
+  text-decoration: none;
+
+}
+
+.menubar li a.active{
+  background-color: #51a74a;
+}
+
+.menubar li a:hover{
+  background-color: skyblue;
+}
+
+.one{
+  margin-left: 15%;
+  padding: 5px 15px;
+  height: auto;
+}
+
+.two ul{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+}
+
+.card img{
+  display:block;
+  border-style: groove;
+  border-color:   yellow;
+  margin:0;
+  width: 100%;
+  height: 200px;
+}
+
+.card-content{
+  margin-left: 15%
+  display: block;
+}
+
+.three{
+  font-family: sans-serif;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.three .box{
+  font-family: sans-serif;
+  padding: 10px;
+}
+
+.three .box:first-child{
+  background-color: #87814f;
+}
+
+.three .box:last-child{
+  background-color: #c9cfd4;}
+
+.footer{
+  font-family: sans-serif;
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: 1fr 1fr;
+
+}

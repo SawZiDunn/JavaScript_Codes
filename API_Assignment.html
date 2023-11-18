@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>API Assignment</title>
+
+	<style>
+		
+		body{
+			background-image: url(https://img.freepik.com/free-photo/grunge-black-concrete-textured-background_53876-124541.jpg);
+		}
+		
+		
+		
+		.nav ul{
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			background-image: url(https://thumbs.dreamstime.com/b/yellow-background-best-abstract-art-design-curtains-wallpaper-sari-t-shirt-tiles-textile-letterhead-invitation-card-202633787.jpg);
+			height: 100px ;
+		}
+
+		li img{
+			float: left;
+			padding: 10px 0px 0px 15px;
+		}
+		
+		li a{
+			padding: 35px 16px;
+			display: block;
+			color: black;
+			text-decoration: none;
+			text text-align: center;
+			float: right;
+			font-size: 20px;
+					}
+		
+		li a:hover{
+			background-color: yellow;
+			color: black;
+		}
+
+		.form{
+			float: right;
+			padding: 0px 30px 0px 0px;
+		}
+
+		.form li{
+			color: white;
+			list-style-type: none;
+			display: block;
+			padding-top: 18px;
+		}
+		.content{
+			margin-left: 30px;
+			color: white;
+		}
+
+		/* Set the size of the div element that contains the map */
+		#map {
+		width: 61%;
+  		height: 340px;
+  		float: left;
+  		
+  		}
+
+  		.video{
+  			float: right;
+  		}
+	</style>
+
+	<script type="text/javascript">
+  		// Initialize and add the map
+		function initMap() {
+  		// The location of Uluru
+  		const uluru = { lat: 13.96153, lng: 100.58762 };
+  		// The map, centered at Uluru
+  		const map = new google.maps.Map(document.getElementById("map"), {
+    	zoom: 4,
+    	center: uluru,
+  		});
+  		// The marker, positioned at Uluru
+  		const marker = new google.maps.Marker({
+    	position: uluru,
+    	map: map,
+  });
+}
+
+window.initMap = initMap;
+  
+</script>
+
+</head>
+<body>
+	<div class="nav">
+		<ul>
+
+			<li><a href="">Hours and Contact</a></li>
+			<li><a href="">Awards</a></li>
+			<li><a href="">Gallery</a></li>
+			<li><a href="">Menu</a></li>
+			<li><a class="active" href="">Home</a></li>
+			<li><img width="130px" height="80px" src="https://media-cdn.tripadvisor.com/media/photo-s/0a/8a/82/38/thai-corner.jpg"></li>
+		</ul>
+		
+		</div>
+
+		<div class="form">
+			<form action="hello.php" method="post">
+				<ul>
+					<li><h3>Email us</h3></li>
+					<li>Name:</li>
+					<li><input  type="text" name="name"></li>
+					<li>Email Address:</li>
+					<li><input type="Email" name="email"></li>
+					<li>Subject:</li>
+					<li><input type="text" name="subject"></li>
+					<li>Message</li>
+					<li><textarea rows="10" cols="50" name="message"></textarea></li>
+					<li><input type="submit"></li>
+				</ul>
+
+				
+			</form>	
+		</div>
+
+		<div class="content">
+			<h2>Hours of Operation</h2>
+			<p>Lunch Thurs - Friday 12:00 pm - 3:00 pm</p>
+			<p>Dinner Tues - Sun 5:30 pm - 10:00 pm</p>
+			<p>Closed Monday</p><br>
+			<h2>Reservation Policy</h2>
+			<p>Rservations are accepted by phone only.</p>
+			<p>Please call us to make your reservations. We will not be able to guarantee a reservation made by email. Thanks for your understanding.</p><br>
+			<h2>Thai Corner Restaurant</h2>
+			<p>3/798 Canning Highway. Applecross WA 6153 (08) 93643435 and (08)93163491</p><br>
+			<h2>Call us</h2>
+			<p>(08) 9364 3435 or (08) 9316 3491</p>
+			<a href="https://web.facebook.com/ba.saw.543"><img  width="30px" height="30px"src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/2048px-Facebook_icon.svg.png"></a> <a href="https://www.instagram.com/saw.zidunn/"><img width="30px" height="30px" src="https://www.pikpng.com/pngl/m/57-576262_connect-with-the-library-on-instagram-and-spotify.png"></a><br>
+			
+			<div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/dxo23k5voiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+			
+			
+         	
+         	<div id="map"></div>
+
+    		<script
+      		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly"
+      		defer
+    		></script>
+
+			</div>
+
+
+
+</body>
+</html>
