@@ -1,32 +1,32 @@
 const http = require('http');
 const port = 8080;
-var url = require('url');
+const url = require('url');
 
 const server = http.createServer(function(req, res){
 
     res.writeHead(200, {'Content-Type': 'text/html'});
 
-    var q = url.parse(req.url, true).query;
+    const q = url.parse(req.url, true).query;
 
-    let name = "zidunn";
-    let pass = "nineRegion";
+    let name = "saw";
+    let pass = "saw";
 
     let username = q.username;
     let password = q.password;
 
     let result = "This is your profile :\n"+username+"\n"+password;
 
-    if(name == username && pass == password){
+    if(name === username && pass === password){
 
     let encryptedData = "";
 
-    for(let i = 0; i<password.length; i++){
-    encryptedData+=password[i];
+    for(let i = 0; i < password.length; i++){
+    encryptedData += password[i];
 
 
-    for(let x=0;x<3 ;x++){
+    for(let x = 0;x<3 ;x++){
 
-        let  rand = Math.floor((Math.random() *27) + 97);
+        let  rand = Math.floor((Math.random() * 27) + 97);
         let random = String.fromCharCode(rand);
         encryptedData+=random;
 
