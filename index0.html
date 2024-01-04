@@ -4,18 +4,28 @@
   <meta charset="utf-8">
   <title>js</title>
 
-  <script src="hello.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function(){
+        document.querySelector('form').onsubmit = function(){
+            let name = document.querySelector('#name').value;
+            alert(`Hello ${name}`);
+            event.preventDefault();
+      }
+    });
+
+  </script>
 
 </head>
 
 <body>
 
-<form>
+  <form>
 
-  <input autofocus autocomplete="off" id="name" placeholder="Name" type="text"><br>
+    <input autofocus autocomplete="off" id="name" placeholder="Name" type="text"><br>
 
-  <input type="submit" name="" value="GO">
-</form>
+    <input type="submit" name="" value="GO">
+
+  </form>
 
 
 
